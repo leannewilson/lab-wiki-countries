@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import CountriesList from './components/CountriesList';
 import CountryDetails from './components/CountryDetails';
+import countries from './countries.json';
 
 function App() {
   return (
@@ -11,21 +12,16 @@ function App() {
       <nav>
         <Navbar />
       </nav>
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={(props) => <CountriesList {...props} />}
-        />
-
-        <Route
-          exact
-          path="/:dynamicId"
-          render={(props) => <CountryDetails {...props} />}
-        />
-      </Switch>
-
-      <CountriesList />
+      <div className="lists">
+        <CountriesList countries={countries} />
+        <Switch>
+          <Route
+            exact
+            path="/:dynamicId"
+            render={(props) => <CountryDetails {...props} />}
+          />
+        </Switch>
+      </div>
     </div>
   );
 }

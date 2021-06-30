@@ -14,8 +14,12 @@ function CountriesList(props) {
   };
 
   return (
-    <div className="countryList">
-      <ShowCountries />
+    <div className="col-5" style={{ maxHeight: '90vh', overflow: 'scroll' }}>
+      <div className="list-group">
+        <a className="list-group-item list-group-item-action">
+          <ShowCountries />
+        </a>
+      </div>
     </div>
   );
 }

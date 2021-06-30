@@ -2,9 +2,11 @@ import React from 'react';
 
 function Navbar(props) {
   return (
-    <div>
-      <div>WikiCountries</div>
-    </div>
+    <nav className="navbar navbar-dark bg-primary mb-3">
+      <div className="container">
+        <a className="navbar-brand">WikiCountries</a>
+      </div>
+    </nav>
   );
 }
 

@@ -1,7 +1,18 @@
 .App {
   text-align: center;
 }
-
+.lists {
+  display: flex;
+}
+a.navbar-brand {
+  margin: auto;
+}
+li {
+  list-style: none;
+}
+.col-7 {
+  display: block;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
